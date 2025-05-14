@@ -1,15 +1,14 @@
 
-import { defineConfig } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
-const config = defineConfig({
+const config: Config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -20,7 +19,7 @@ const config = defineConfig({
     },
     extend: {
       fontFamily: {
-        rubik: ["Rubik", "sans-serif"],
+        'rubik': ['Rubik', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -59,11 +58,11 @@ const config = defineConfig({
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
+          border: "hsl(var(--sidebar-border))",
           primary: "hsl(var(--sidebar-primary))",
           "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
           accent: "hsl(var(--sidebar-accent))",
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
       },
@@ -88,7 +87,7 @@ const config = defineConfig({
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-});
+  plugins: [require("tailwindcss-animate")],
+}
 
 export default config;
